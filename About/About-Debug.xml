@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>HungerGuns - Dev Build</name>
+	<author>TheAmazingFedex</author>
+	<targetVersion>1.0.0</targetVersion>
+	<description>My first mod! Sorry for any bugs. I just wanted to learn how to mod RimWorld, and decided to make a gun that causes hunger. Enjoy! 
+(This is the dev version of HungerGuns. The release version of About.xml is available for editing at About/About-Release.xml. Edits made on this file or on the temporary About/About.xml won't show up on the release version. Use VisualStudio to build a "Release" version of this mod when ready to upload your mod!)</description>
+	<url>https://steamcommunity.com/id/TheAmazingFedex/myworkshopfiles/?appid=294100</url>
+</ModMetaData>
