@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <Bullet_HungerBullet_SuccessMessage>Hunger Strikes! {0} is ravenously hungry!</Bullet_HungerBullet_SuccessMessage>
+  <Bullet_HungerBullet_FailureMote>Hunger did not strike {0}</Bullet_HungerBullet_FailureMote>
+</LanguageData>

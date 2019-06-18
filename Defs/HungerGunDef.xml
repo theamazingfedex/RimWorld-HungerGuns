@@ -16,7 +16,6 @@
       <speed>55</speed>
     </projectile>
     <AddHediffChance>0.9</AddHediffChance>
-    <HediffToAdd>Plague</HediffToAdd>
     <thingClass>HungerGuns.Projectile_HungerBullet</thingClass>
   </ThingDef>
 
@@ -24,6 +23,7 @@
     <defName>Gun_Hungergun</defName>
     <label>Hungergun Revolver</label>
     <description>A gun which does no damage, but stops the enemy dead in their tracks with hunger!</description>
+    <generateCommonality>1.2</generateCommonality>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -39,8 +39,10 @@
       <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
+      <li>Gun</li>
       <li>SimpleGun</li>
       <li>Revolver</li>
+      <li>HungerGun</li>
     </weaponTags>
     <costList>
       <Steel>30</Steel>
