@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-  <name>HungerGuns</name>
+  <name>HungerGuns - dev</name>
   <author>TheAmazingFedex</author>
-  <targetVersion>1.0.2282</targetVersion>
+  <targetVersion>1.0</targetVersion>
+  <supportedVersions>
+    <li>1.0</li>
+  </supportedVersions>
   <description>
-    My first mod! Sorry for any bugs. I just wanted to learn how to mod RimWorld, and decided to make a gun that causes hunger. Enjoy!
-  </description>
+Adds an innocuous revolver to the world, craftable everywhere vanilla revolvers can be crafted, that causes SEVERE hunger, and sends the target into a feeding frenzy!
+The HungerGun has a pretty good chance to hit when up close, but still decent at max range. No damage, and slight knockback are also features of this weapon.
+Other factions can spawn with this weapon, and have an increased chance to do so. (to make it feel like a threat)
+
+I may at some point add some more types of HungerGuns, and maybe even some art, but for now, this is it. :)
+This is my first mod! Sorry for any bugs. I just wanted to learn how to mod RimWorld, and decided to make a gun that causes hunger. Enjoy!
+</description>
 </ModMetaData>
