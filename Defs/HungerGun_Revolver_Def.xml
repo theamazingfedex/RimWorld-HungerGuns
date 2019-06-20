@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Defs>
-  <ThingDef Class="HungerGuns.ThingDef_HungerBullet" ParentName="BaseBullet">
+  <ThingDef ParentName="BaseBullet">
     <defName>Bullet_HungerBullet</defName>
     <label>Hungergun Bullet</label>
     <graphicData>
@@ -15,12 +15,11 @@
       <stoppingPower>1</stoppingPower>
       <speed>55</speed>
     </projectile>
-    <AddHediffChance>0.9</AddHediffChance>
     <thingClass>HungerGuns.Projectile_HungerBullet</thingClass>
   </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
-    <defName>Gun_Hungergun</defName>
+    <defName>Gun_Hungergun_Revolver</defName>
     <label>Hungergun Revolver</label>
     <description>A gun which does no damage, but stops the enemy dead in their tracks with hunger!</description>
     <generateCommonality>1.2</generateCommonality>
@@ -30,7 +29,7 @@
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>
     <statBases>
-      <WorkToMake>2000</WorkToMake>
+      <WorkToMake>6000</WorkToMake>
       <Mass>1.1</Mass>
       <AccuracyTouch>0.99</AccuracyTouch>
       <AccuracyShort>0.95</AccuracyShort>
@@ -50,7 +49,7 @@
     </costList>
     <recipeMaker>
       <skillRequirements>
-        <Crafting>3</Crafting>
+        <Crafting>7</Crafting>
       </skillRequirements>
     </recipeMaker>
     <verbs>

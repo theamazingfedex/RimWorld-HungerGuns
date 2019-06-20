@@ -3,16 +3,25 @@
 <ModMetaData>
   <name>HungerGuns - dev</name>
   <author>TheAmazingFedex</author>
-  <targetVersion>1.0</targetVersion>
   <supportedVersions>
     <li>1.0</li>
   </supportedVersions>
   <description>
-Adds an innocuous revolver to the world, craftable everywhere vanilla revolvers can be crafted, that causes SEVERE hunger, and sends the target into a feeding frenzy!
-The HungerGun has a pretty good chance to hit when up close, but still decent at max range. No damage, and slight knockback are also features of this weapon.
-Other factions can spawn with this weapon, and have an increased chance to do so. (to make it feel like a threat)
+Adds an innocuous revolver and bolt-action rifle to the world, craftable everywhere vanilla weapons can be crafted, that causes SEVERE hunger, and sends the target into a feeding frenzy!
+
+HungerGuns Added:
+- The HungerGun Revolver has a pretty good chance to hit when up close, but still decent at max range.
+- The HungerGun Bolt-Action Rifle has similar stats to that of a vanilla Bolt-Action Rifle.
+- The HungerGun Shotgun has less effective range than a vanilla shotgun, but crazy stopping power.
+
+* No damage, and slight knockback are also features of these weapons.
+
+Other factions can spawn with these weapons, and have an increased chance to do so. (to make them feel like a threat)
 
 I may at some point add some more types of HungerGuns, and maybe even some art, but for now, this is it. :)
 This is my first mod! Sorry for any bugs. I just wanted to learn how to mod RimWorld, and decided to make a gun that causes hunger. Enjoy!
+
+
+Last Updated: 06/19/2019
 </description>
 </ModMetaData>

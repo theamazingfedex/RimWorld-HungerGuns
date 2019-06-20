@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HungerBullet_Shotgun</defName>
+    <label>Hungry Shotgun Blast</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <stoppingPower>9</stoppingPower>
+      <armorPenetrationBase>0.24</armorPenetrationBase>
+      <speed>55</speed>
+    </projectile>
+    <thingClass>HungerGuns.Projectile_HungerBullet</thingClass>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Hungergun_Shotgun</defName>
+    <label>HungerGun Pump Shotgun</label>
+    <description>An ancient design of shotgun that emits a tight-packed spray of hunger inducing pellets. Famishing, but short range.</description>
+    <generateCommonality>1.2</generateCommonality>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>Interact_Shotgun</soundInteract>
+    <statBases>
+      <WorkToMake>8000</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>0.98</AccuracyTouch>
+      <AccuracyShort>0.99</AccuracyShort>
+      <AccuracyMedium>0.55</AccuracyMedium>
+      <AccuracyLong>0.15</AccuracyLong>
+      <RangedWeapon_Cooldown>1.25</RangedWeapon_Cooldown>
+    </statBases>
+    <weaponTags>
+      <li>PumpShotgun</li>
+      <li>Gun</li>
+      <li>HungerGun</li>
+      <li>SimpleGun</li>
+    </weaponTags>
+    <costList>
+      <Steel>60</Steel>
+      <ComponentIndustrial>3</ComponentIndustrial>
+    </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>7</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HungerBullet_Shotgun</defaultProjectile>
+        <warmupTime>0.9</warmupTime>
+        <range>10.0</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+</Defs>

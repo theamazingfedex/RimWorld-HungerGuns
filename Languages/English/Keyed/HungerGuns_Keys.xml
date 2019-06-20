@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-  <Bullet_HungerBullet_SuccessMessage>Hunger Strikes! {0} is ravenously hungry!</Bullet_HungerBullet_SuccessMessage>
-  <Bullet_HungerBullet_FailureMote>Hunger did not strike {0}</Bullet_HungerBullet_FailureMote>
+  <Bullet_HungerBullet_SuccessMessage>The Hunger Strikes! {0} is ravenously hungry!</Bullet_HungerBullet_SuccessMessage>
+  <Bullet_HungerBullet_FailureMote>The Hunger did not strike, {0}% Chance</Bullet_HungerBullet_FailureMote>
+  <HungerGuns_cannibalismTriggeredMessage>The Hunger Strikes and {0} suddenly developed a taste for human flesh!
+It's irresistable! Look out!</HungerGuns_cannibalismTriggeredMessage>
+  <HungerGuns_triggerCannibalism>Should Trigger Cannibalism</HungerGuns_triggerCannibalism>
+  <HungerGuns_chanceToTrigger>Percentage chance to trigger Hunger Strike on hit: {0}% (Default: 90%)</HungerGuns_chanceToTrigger>
+  <HungerGuns_cannibalismChance>Percentage chance to trigger rampant cannibalism on-hit: {0}% (Default: 20%)
+(Calculated after Hunger Chance)</HungerGuns_cannibalismChance>
 </LanguageData>
