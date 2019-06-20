@@ -24,7 +24,7 @@
     <description>A gun which does no damage, but stops the enemy dead in their tracks with hunger!</description>
     <generateCommonality>1.2</generateCommonality>
     <graphicData>
-      <texPath>Things/Item/Equipment/WeaponRanged/Revolver</texPath>
+      <texPath>Things/Item/Equipment/WeaponRanged/HungerGuns_Revolver_default</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <soundInteract>Interact_Revolver</soundInteract>

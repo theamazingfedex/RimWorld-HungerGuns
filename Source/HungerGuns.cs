@@ -9,11 +9,13 @@ namespace HungerGuns
         protected override void Impact(Thing hitThing)
         {
             base.Impact(hitThing);
-
-            if (def != null && hitThing != null && hitThing is Pawn hitPawn)
+            if (this.def != null && hitThing != null && hitThing is Pawn hitPawn)
             {
                 var rand = Rand.Value;
-                if (rand <= 1f && !hitPawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                var shouldCauseCannibalism = LoadedModManager.GetMod<HungerGuns_Mod>().GetSettings<HungerGuns_Settings>().triggerCannibalism;
+                var cannibalismTriggerChance = HungerGuns_Settings.cannibalismChance;
+                var hungerTriggerChance = HungerGuns_Settings.percentChanceToTriggerHunger;
+                if (rand <= hungerTriggerChance && !hitPawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
                 {
                     Messages.Message("Bullet_HungerBullet_SuccessMessage".Translate(
                         this.launcher.Label
@@ -25,12 +27,21 @@ namespace HungerGuns
                     hitPawn.needs.food = foodNeed;
                     hitPawn?.health?.AddHediff(HediffDefOf.Malnutrition);
 
-                    hitPawn?.mindState?.priorityWork?.ClearPrioritizedWorkAndJobQueue();
-                    hitPawn?.mindState?.mentalStateHandler?.TryStartMentalState(DefDatabase<MentalStateDef>.GetNamed("Binging_Food"));
+                    if (shouldCauseCannibalism && Rand.Value <= cannibalismTriggerChance / 100)
+                    {
+                        Messages.Message("HungerGuns_cannibalismTriggeredMessage".Translate(hitPawn.Label), MessageTypeDefOf.NeutralEvent);
+                        hitPawn?.story?.traits?.allTraits?.Add(new Trait(TraitDefOf.Cannibal, 0, true));
+                        hitPawn?.mindState?.mentalStateHandler?.TryStartMentalState(DefDatabase<MentalStateDef>.GetNamed("MurderousRage"));
+                    }
+                    else
+                    {
+                        Messages.Message("Bullet_HungerBullet_SuccessMessage".Translate(hitPawn.Label), MessageTypeDefOf.NeutralEvent);
+                        hitPawn?.mindState?.mentalStateHandler?.TryStartMentalState(DefDatabase<MentalStateDef>.GetNamed("Binging_Food"));
+                    }
                 }
                 else
                 {
-                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "Bullet_HungerBullet_FailureMote".Translate(0), 12f);
+                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "Bullet_HungerBullet_FailureMote".Translate(hungerTriggerChance), 12f);
                 }
             }
         }
