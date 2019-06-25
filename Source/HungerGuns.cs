@@ -3,7 +3,6 @@ using System.Linq;
 using RimWorld;
 using Verse;
 using Verse.AI;
-using static HungerGuns.JobGiver_CannibalisticRage;
 
 namespace HungerGuns
 {
@@ -42,10 +41,14 @@ namespace HungerGuns
                             hitPawn.jobs.ClearQueuedJobs();
                             hitPawn?.story?.traits?.allTraits?.Add(cannibalTrait);
                             // hitPawn?.mindState?.mentalStateHandler?.TryStartMentalState(DefDatabase<MentalStateDef>.GetNamed("MurderousRage"));
-                            var newJob = new Job(HungerGuns_JobDefOf.CannibalisticRage, FindFoodToEat(hitPawn));
+                            var foodToEat = FindFoodToEat(hitPawn);
+                            if (foodToEat != null)
+                            {
+                                // Go beat someone to death, to create a corpse
+                            }
+                            var newJob = new Job(HungerGuns_JobDefOf.CannibalisticRage, foodToEat);
                             hitPawn.jobs.EndCurrentJob(JobCondition.InterruptForced, false);
                             hitPawn.jobs.TryTakeOrderedJob(newJob, new JobTag?(JobTag.SatisfyingNeeds).Value);
-                            Messages.Message($"new job:: {hitPawn.jobs.curJob.def.label}", MessageTypeDefOf.NeutralEvent);
                         }
                         else
                         {
@@ -85,6 +88,10 @@ namespace HungerGuns
             Messages.Message($"FoundCorpse:: {corpses[0].def.label}", MessageTypeDefOf.NeutralEvent);
             return corpses.First();
         }
-
+    }
+    [DefOf]
+    public static class HungerGuns_JobDefOf
+    {
+        public static JobDef CannibalisticRage;
     }
 }
