@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="HungerGuns.cs" />
     <Compile Include="HungerGuns_Settings.cs" />
+    <Compile Include="JobDriver_CannibalisticRage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
