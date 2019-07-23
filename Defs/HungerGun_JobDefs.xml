@@ -8,4 +8,11 @@
     <casualInterruptible>false</casualInterruptible>
     <suspendable>false</suspendable>
   </JobDef>
+  <JobDef>
+    <defName>HGMurder</defName>
+    <driverClass>HungerGuns.JobDriver_HGMurder</driverClass>
+    <reportString>Murdering TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <suspendable>false</suspendable>
+  </JobDef>
 </Defs>
