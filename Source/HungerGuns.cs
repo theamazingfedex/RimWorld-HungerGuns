@@ -13,7 +13,8 @@ namespace HungerGuns
             if (def != null && hitThing != null && hitThing is Pawn hitPawn)
             {
                 var rand = Rand.Value;
-                if (rand <= 1f && !hitPawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
+                var hungerTriggerChance = HungerGuns_Settings.percentChanceToTriggerHunger;
+                if (rand <= hungerTriggerChance && !hitPawn.health.hediffSet.HasHediff(HediffDefOf.Malnutrition))
                 {
                     Messages.Message("Bullet_HungerBullet_SuccessMessage".Translate(
                         this.launcher.Label
@@ -30,7 +31,7 @@ namespace HungerGuns
                 }
                 else
                 {
-                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "Bullet_HungerBullet_FailureMote".Translate(0), 12f);
+                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "Bullet_HungerBullet_FailureMote".Translate((int)hungerTriggerChance), 12f);
                 }
             }
         }
