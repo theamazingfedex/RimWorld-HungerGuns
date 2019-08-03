@@ -7,14 +7,15 @@
     <li>1.0</li>
   </supportedVersions>
   <description>
-Adds an innocuous revolver and bolt-action rifle to the world, craftable everywhere vanilla weapons can be crafted, that causes SEVERE hunger, and sends the target into a feeding frenzy!
+Adds an innocuous revolver, shotgun, and bolt-action rifle to the world, craftable everywhere vanilla weapons can be crafted, that causes SEVERE hunger, and sends the target into a feeding frenzy!
 
 HungerGuns Added:
 - The HungerGun Revolver has a pretty good chance to hit when up close, but still decent at max range.
-- The HungerGun Bolt-Action Rifle has similar stats to that of a vanilla Bolt-Action Rifle.
 - The HungerGun Shotgun has less effective range than a vanilla shotgun, but crazy stopping power.
+- The HungerGun Bolt-Action Rifle has similar stats to that of a vanilla Bolt-Action Rifle.
 
 * No damage, and slight knockback are also features of these weapons.
+* Mod option to set the percentage chance that hunger will strike on-hit.
 
 Other factions can spawn with these weapons, and have an increased chance to do so. (to make them feel like a threat)
 
